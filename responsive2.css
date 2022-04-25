@@ -1,0 +1,152 @@
+body {
+    text-align: center;
+}
+header {
+    display:flex;
+    justify-content: space-between;
+    background-color: brown;
+}
+.logo {
+    width: 200px;
+    height: 100px;
+}
+nav ul li {
+    display: inline-block;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 30px;
+    color:  white;
+    background-color: blueviolet;
+}
+.container {
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+aside {
+    border: 2px solid black;
+}
+main {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    border: 1px solid black;
+}
+main .product img {
+    width: 200px;
+    height: 200px;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+#myBtn {
+    margin: 5px;
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    cursor: pointer;
+}
+button {
+    background-color: blueviolet;
+}
+button:hover{
+    background-color: aqua;
+}
+footer {
+    font-weight: bold;
+}
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: fit-content;
+    }
+    header {
+        position: fixed;
+    }
+    .logo {
+        width:250px;
+        height: 200px;
+    }
+}
+@media only screen and (max-width: 922px){
+    .container {
+        display: grid;
+        grid-template-columns: 10% 90%;
+    }
+    #myBtn {
+        position: sticky;
+    }
+
+}
+@media only screen and (max-width: 768px){
+    header {
+        position: fixed;
+    }
+    .container {
+        grid-template-columns: 20%  80%;
+    }
+    main {
+        display: grid;
+        grid-template-columns:  50% 50%;
+        grid-template-rows: 50% 50%;
+        border: 1px solid black;
+        margin: 0%;
+        padding: 0%;
+    }
+    footer {
+        display: none;
+    }
+}
+@media only screen and (max-width: 576px) {
+    aside {
+        display: none;
+    }
+    header nav ul li {
+        display: none;
+    }
+    .container {
+        display: block;
+        background-color: aqua;
+    }
+    main {
+        grid-template-columns: 100%;
+    }
+    footer {
+        position: fixed;
+    }
+
+}
+@media only screen and (max-width: 390px){
+    .hamburger-button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 1px solid black;
+    }
+    header nav {
+        display: none;
+    }
+    aside {
+        display: none;
+    }
+    .container {
+        display: block;
+    }
+    main{
+        grid-template-columns: 100%;
+    }
+    #filter-button {
+        display: inline-block;
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+
+}
+
+
